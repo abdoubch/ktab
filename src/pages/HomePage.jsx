@@ -1,11 +1,17 @@
 import React from "react";
-import { Hero } from "../components";
+import { Hero, NavBar } from "../components";
+import BookList from "../components/BookList";
+import { styles } from "../style";
+import Services from "../components/Services";
 
 const HomePage = () => {
   return (
     <>
-      <div className="bg-[#FFFEFD]">
+      <NavBar />
+      <div className={`${styles.paddingX} bg-[#FFFEFD] text-main-black`}>
         <Hero />
+        <Services />
+        <BookList />
       </div>
     </>
   );

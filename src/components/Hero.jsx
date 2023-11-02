@@ -4,7 +4,7 @@ import heropic from "../assets/HeroPic.png";
 
 const Hero = () => {
   return (
-    <main className={`${styles.paddingX} w-full h-screen pt-7`}>
+    <main className={` ${styles.paddingY} w-full h-screen pt-7`}>
       <div className="flex justify-between items-center">
         <div>
           <div className="max-w-4xl">
@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <img src={heropic} alt="books" className="absolute right-10 bottom-3" />
+        <img src={heropic} alt="books" className="absolute right-10 bottom-8" />
       </div>
     </main>
   );

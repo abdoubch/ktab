@@ -1,15 +1,15 @@
-import { useState } from "react";
-import viteLogo from "/vite.svg";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages";
+import { HomePage, MagasinPage, BookPage, SearchPage } from "./pages";
 import { NavBar } from "./components";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/magasin" element={<MagasinPage/>}/>
+        <Route path="/book" element={<BookPage/>}/>
+        <Route path="/search" element={<SearchPage/>}/>
       </Routes>
     </BrowserRouter>
   );

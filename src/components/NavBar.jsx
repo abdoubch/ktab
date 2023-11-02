@@ -5,33 +5,40 @@ import { styles } from "../style";
 
 
 const NavBar = () => {
-    const [active, setActive] = useState("Home")
+    const [active, setActive] = useState("HOME")
     const navLinks = [
       {
         id: "/",
-        title: "Home",
+        title: "HOME",
       },
       {
-        id: "/apropos",
-        title: "A propos",
+        id: "/recherche",
+        title: "RECHERCHER",
       },
       {
-        id: "/brg",
-        title: "BRG",
+        id: "/magasin",
+        title: "MAGASIN",
       },
       {
-        id: "/reviews",
-        title: "Reviews",
+        id: "/revue",
+        title: "REVUE",
       },
-      {
-        id: "/faq",
-        title: "Faq",
-      },
+     
     ];
   return (
-    <nav className="w-full flex items-center py-5 sticky top-0 z-20 bg-white border-b-2">
-      <div className={`w-full flex justify-between items-center  ${styles.paddingX}`}>
-        <Link to="/" className="flex items-center gap-2">
+    <nav className="w-full flex items-center py-5 sticky top-0 z-20 bg-white border-b-2 shadow-md shadow-main-black/10">
+      <div
+        className={`w-full flex justify-between items-center  ${styles.paddingX}`}
+      >
+        <div></div>
+        <div></div>
+        <Link
+          to="/"
+          className="flex items-center gap-2 absolute left-0 top-0"
+          onClick={() => {
+            setActive("HOME");
+          }}
+        >
           <img src={logo} alt="logo" />
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
